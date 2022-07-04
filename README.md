@@ -14,7 +14,7 @@ Application ID: TBD
 
 ## Acknowledgements
 
-Many thanks to members of the Algorand developer relations team, including but not limited to @barnjamin, @nullun, @joe-p, and @jannotti, as well as many developers in the Algorand community, who have been extremely generous with their expertise.
+Many thanks to members of the Algorand developer relations team, including but not limited to [@barnjamin](https://github.com/barnjamin), [@nullun](https://github.com/nullun), [@joe-p](https://github.com/joe-p), and [@jannotti](https://github.com/jannotti), as well as many developers in the Algorand community, who have been extremely generous with their expertise.
 
 ## More Information
 
