@@ -8,9 +8,9 @@ This repository contains the Algorand smart contract in TEAL, as well as the PyT
 
 ## Current Status
 
-### TestNet - Coming Soon
+### TestNet - Pre-Alpha
 
-Application ID: TBD
+Application ID: 222728680
 
 ### MainNet - Coming Soon
 
@@ -18,4 +18,4 @@ Application ID: TBD
 
 ## Acknowledgements
 
-Many thanks to members of the Algorand developer relations team and broader developer community, including but not limited to [@barnjamin](https://github.com/barnjamin), [@nullun](https://github.com/nullun), [@joe-p](https://github.com/joe-p), [@jannotti](https://github.com/jannotti), and [@pbennett](https://github.com/pbennett), who have been extremely generous with their expertise.
+Many thanks to members of the Algorand developer relations team and broader developer community, including but not limited to [@barnjamin](https://github.com/barnjamin), [@nullun](https://github.com/nullun), [@joe-p](https://github.com/joe-p), [@jannotti](https://github.com/jannotti), [@pbennett](https://github.com/pbennett), [@robdmoore](https://github.com/robdmoore), [@daniel-makerx](https://github.com/daniel-makerx) and [@aorumbayev](https://github.com/aorumbayev), who have been extremely generous with their expertise.
