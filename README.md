@@ -1,6 +1,6 @@
 [![Alright Logo](/alright-full-logo-black-on-white@4x.png)](https://alright.app)
 
-Learn about Alright escrow at [Alright.app](https://alright.app)
+Learn about Alright peer-to-peer escrow agreements at [alright.cool](https://alright.cool)
 
 # Alright Smart Contracts
 
