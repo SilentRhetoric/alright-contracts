@@ -1,0 +1,342 @@
+{
+    "name": "AlrightApp",
+    "methods": [
+        {
+            "name": "deal_value_method",
+            "args": [
+                {
+                    "type": "(byte,byte,address,uint64,uint64,uint64,uint64,address,uint64,uint64,uint64,uint64,uint64,uint64,byte,byte,string)",
+                    "name": "deal_value"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "hello",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "name"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "change_status",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "new_status"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "change_owner",
+            "args": [
+                {
+                    "type": "address",
+                    "name": "new_owner"
+                }
+            ],
+            "returns": {
+                "type": "address"
+            }
+        },
+        {
+            "name": "send_note",
+            "args": [
+                {
+                    "type": "address",
+                    "name": "receiver"
+                },
+                {
+                    "type": "string",
+                    "name": "note"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "verify_nfd",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "nfd_name"
+                },
+                {
+                    "type": "uint64",
+                    "name": "nfd_app_id"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "opt_in_to_asa",
+            "args": [
+                {
+                    "type": "asset",
+                    "name": "asset"
+                },
+                {
+                    "type": "pay",
+                    "name": "payment"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "box_budget",
+            "args": [],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "create_deal",
+            "args": [
+                {
+                    "type": "txn",
+                    "name": "deposit_payment"
+                },
+                {
+                    "type": "txn",
+                    "name": "collateral_payment"
+                },
+                {
+                    "type": "uint64",
+                    "name": "key_index"
+                },
+                {
+                    "type": "uint64",
+                    "name": "your_dep_amount"
+                },
+                {
+                    "type": "uint64",
+                    "name": "your_dep_asset"
+                },
+                {
+                    "type": "uint64",
+                    "name": "your_col_amount"
+                },
+                {
+                    "type": "uint64",
+                    "name": "your_col_asset"
+                },
+                {
+                    "type": "account",
+                    "name": "their_address"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_key_index"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_dep_amount"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_dep_asset"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_col_amount"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_col_asset"
+                },
+                {
+                    "type": "string",
+                    "name": "deal_note"
+                },
+                {
+                    "type": "txn",
+                    "name": "registration_payment"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            }
+        },
+        {
+            "name": "attach_data",
+            "args": [
+                {
+                    "type": "byte[33]",
+                    "name": "deal_key"
+                },
+                {
+                    "type": "uint64",
+                    "name": "key_index"
+                },
+                {
+                    "type": "uint64",
+                    "name": "data_length"
+                },
+                {
+                    "type": "uint64",
+                    "name": "data_index"
+                },
+                {
+                    "type": "string",
+                    "name": "data"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            }
+        },
+        {
+            "name": "match_deal",
+            "args": [
+                {
+                    "type": "txn",
+                    "name": "deposit_payment"
+                },
+                {
+                    "type": "txn",
+                    "name": "collateral_payment"
+                },
+                {
+                    "type": "byte[33]",
+                    "name": "deal_key"
+                },
+                {
+                    "type": "uint64",
+                    "name": "key_index"
+                },
+                {
+                    "type": "account",
+                    "name": "their_address"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_key_index"
+                }
+            ],
+            "returns": {
+                "type": "byte[2]"
+            }
+        },
+        {
+            "name": "recall_deal",
+            "args": [
+                {
+                    "type": "byte[33]",
+                    "name": "deal_key"
+                },
+                {
+                    "type": "uint64",
+                    "name": "key_index"
+                },
+                {
+                    "type": "account",
+                    "name": "their_address"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_key_index"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "reject_deal",
+            "args": [
+                {
+                    "type": "byte[33]",
+                    "name": "deal_key"
+                },
+                {
+                    "type": "uint64",
+                    "name": "key_index"
+                },
+                {
+                    "type": "account",
+                    "name": "their_address"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_key_index"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "adjust_disbursement",
+            "args": [
+                {
+                    "type": "byte[33]",
+                    "name": "deal_key"
+                },
+                {
+                    "type": "uint64",
+                    "name": "key_index"
+                },
+                {
+                    "type": "account",
+                    "name": "their_address"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_key_index"
+                },
+                {
+                    "type": "uint64",
+                    "name": "first_acc_forward_amount"
+                },
+                {
+                    "type": "uint64",
+                    "name": "second_acc_forward_amount"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "agree_disbursement",
+            "args": [
+                {
+                    "type": "byte[33]",
+                    "name": "deal_key"
+                },
+                {
+                    "type": "uint64",
+                    "name": "key_index"
+                },
+                {
+                    "type": "account",
+                    "name": "their_address"
+                },
+                {
+                    "type": "uint64",
+                    "name": "their_key_index"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        }
+    ],
+    "networks": {},
+    "desc": "Peer-to-peer escrow agreements powered by Algorand"
+}

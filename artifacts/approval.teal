@@ -1,0 +1,2874 @@
+#pragma version 8
+intcblock 0 1 256 4 1023 150 2500 400
+bytecblock 0x 0x00 0x151f7c75 0x01 0x6f776e6572 0x02 0x6163746976655f6465616c73 0x737461747573 0x03 0x636f6d706c657465645f6465616c73 0x4465616c20726563616c6c6564 0x4465616c2072656a656374656420627920 0x746f74616c5f6465616c73 0x616374697665 0x44 0x5061727469616c207061796d656e7420666f7277617264 0x5061727469616c207061796d656e742072657475726e6564 0x436f6c6c61746572616c2072657475726e6564 0x5061796d656e742072657475726e6564 0x5061796d656e7420666f7277617264 0x446973627572736564
+txn NumAppArgs
+intc_0 // 0
+==
+bnz main_l32
+txna ApplicationArgs 0
+pushbytes 0x6a5d441d // "deal_value_method((byte,byte,address,uint64,uint64,uint64,uint64,address,uint64,uint64,uint64,uint64,uint64,uint64,byte,byte,string))void"
+==
+bnz main_l31
+txna ApplicationArgs 0
+pushbytes 0x02bece11 // "hello(string)string"
+==
+bnz main_l30
+txna ApplicationArgs 0
+pushbytes 0xa43db1ca // "change_status(string)string"
+==
+bnz main_l29
+txna ApplicationArgs 0
+pushbytes 0x03337bf9 // "change_owner(address)address"
+==
+bnz main_l28
+txna ApplicationArgs 0
+pushbytes 0xaa82defc // "send_note(address,string)string"
+==
+bnz main_l27
+txna ApplicationArgs 0
+pushbytes 0x077d3f59 // "verify_nfd(string,uint64)string"
+==
+bnz main_l26
+txna ApplicationArgs 0
+pushbytes 0x42feff32 // "opt_in_to_asa(asset,pay)string"
+==
+bnz main_l25
+txna ApplicationArgs 0
+pushbytes 0xef784a88 // "box_budget()void"
+==
+bnz main_l24
+txna ApplicationArgs 0
+pushbytes 0x2b0175ec // "create_deal(txn,txn,uint64,uint64,uint64,uint64,uint64,account,uint64,uint64,uint64,uint64,uint64,string,txn)uint64"
+==
+bnz main_l23
+txna ApplicationArgs 0
+pushbytes 0x40241f29 // "attach_data(byte[33],uint64,uint64,uint64,string)uint64"
+==
+bnz main_l22
+txna ApplicationArgs 0
+pushbytes 0xb9f0d94b // "match_deal(txn,txn,byte[33],uint64,account,uint64)byte[2]"
+==
+bnz main_l21
+txna ApplicationArgs 0
+pushbytes 0x3a483ff6 // "recall_deal(byte[33],uint64,account,uint64)string"
+==
+bnz main_l20
+txna ApplicationArgs 0
+pushbytes 0xcb6107bd // "reject_deal(byte[33],uint64,account,uint64)string"
+==
+bnz main_l19
+txna ApplicationArgs 0
+pushbytes 0x6441fee4 // "adjust_disbursement(byte[33],uint64,account,uint64,uint64,uint64)string"
+==
+bnz main_l18
+txna ApplicationArgs 0
+pushbytes 0xf264878b // "agree_disbursement(byte[33],uint64,account,uint64)string"
+==
+bnz main_l17
+err
+main_l17:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub agreedisbursementcaster_40
+intc_1 // 1
+return
+main_l18:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub adjustdisbursementcaster_39
+intc_1 // 1
+return
+main_l19:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub rejectdealcaster_38
+intc_1 // 1
+return
+main_l20:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub recalldealcaster_37
+intc_1 // 1
+return
+main_l21:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub matchdealcaster_36
+intc_1 // 1
+return
+main_l22:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub attachdatacaster_35
+intc_1 // 1
+return
+main_l23:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub createdealcaster_34
+intc_1 // 1
+return
+main_l24:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub boxbudgetcaster_33
+intc_1 // 1
+return
+main_l25:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub optintoasacaster_32
+intc_1 // 1
+return
+main_l26:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub verifynfdcaster_31
+intc_1 // 1
+return
+main_l27:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub sendnotecaster_30
+intc_1 // 1
+return
+main_l28:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub changeownercaster_29
+intc_1 // 1
+return
+main_l29:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub changestatuscaster_28
+intc_1 // 1
+return
+main_l30:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub hellocaster_27
+intc_1 // 1
+return
+main_l31:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub dealvaluemethodcaster_26
+intc_1 // 1
+return
+main_l32:
+txn OnCompletion
+intc_0 // NoOp
+==
+bnz main_l38
+txn OnCompletion
+intc_3 // UpdateApplication
+==
+bnz main_l37
+txn OnCompletion
+pushint 5 // DeleteApplication
+==
+bnz main_l36
+err
+main_l36:
+txn ApplicationID
+intc_0 // 0
+!=
+assert
+callsub delete_1
+intc_1 // 1
+return
+main_l37:
+txn ApplicationID
+intc_0 // 0
+!=
+assert
+callsub update_0
+intc_1 // 1
+return
+main_l38:
+txn ApplicationID
+intc_0 // 0
+==
+assert
+callsub create_2
+intc_1 // 1
+return
+
+// update
+update_0:
+proto 0 0
+txn Sender
+global CreatorAddress
+==
+// unauthorized
+assert
+pushint TMPL_UPDATABLE // TMPL_UPDATABLE
+// Check app is updatable
+assert
+retsub
+
+// delete
+delete_1:
+proto 0 0
+txn Sender
+global CreatorAddress
+==
+// unauthorized
+assert
+pushint TMPL_DELETABLE // TMPL_DELETABLE
+// Check app is deletable
+assert
+retsub
+
+// create
+create_2:
+proto 0 0
+bytec 6 // "active_deals"
+intc_0 // 0
+app_global_put
+bytec 9 // "completed_deals"
+intc_0 // 0
+app_global_put
+bytec 4 // "owner"
+global CreatorAddress
+app_global_put
+bytec 7 // "status"
+pushbytes 0x696e616374697665 // "inactive"
+app_global_put
+bytec 12 // "total_deals"
+intc_0 // 0
+app_global_put
+retsub
+
+// deal_value_method
+dealvaluemethod_3:
+proto 1 0
+txn Sender
+bytec 4 // "owner"
+app_global_get
+==
+// unauthorized
+assert
+intc_0 // 0
+return
+
+// hello
+hello_4:
+proto 1 1
+bytec_0 // ""
+pushbytes 0x48656c6c6f2c20 // "Hello, "
+frame_dig -1
+extract 2 0
+concat
+pushbytes 0x2e20596f7520616c72696768743f // ". You alright?"
+concat
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub
+
+// change_status
+changestatus_5:
+proto 1 1
+bytec_0 // ""
+txn Sender
+bytec 4 // "owner"
+app_global_get
+==
+// unauthorized
+assert
+bytec 7 // "status"
+frame_dig -1
+extract 2 0
+app_global_put
+bytec 7 // "status"
+app_global_get
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub
+
+// change_owner
+changeowner_6:
+proto 1 1
+bytec_0 // ""
+txn Sender
+bytec 4 // "owner"
+app_global_get
+==
+// unauthorized
+assert
+frame_dig -1
+balance
+intc_0 // 0
+>
+// New owner balance > 0
+assert
+bytec 4 // "owner"
+frame_dig -1
+app_global_put
+bytec 4 // "owner"
+app_global_get
+frame_bury 0
+frame_dig 0
+len
+pushint 32 // 32
+==
+assert
+retsub
+
+// send_note
+sendnote_7:
+proto 2 1
+bytec_0 // ""
+txn Sender
+bytec 4 // "owner"
+app_global_get
+==
+// unauthorized
+assert
+itxn_begin
+intc_1 // pay
+itxn_field TypeEnum
+intc_0 // 0
+itxn_field Amount
+frame_dig -2
+itxn_field Receiver
+frame_dig -1
+extract 2 0
+itxn_field Note
+intc_0 // 0
+itxn_field Fee
+itxn_submit
+frame_dig -1
+extract 2 0
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub
+
+// verify_nfd
+verifynfd_8:
+proto 2 1
+bytec_0 // ""
+txn Sender
+bytec 4 // "owner"
+app_global_get
+==
+// unauthorized
+assert
+itxn_begin
+pushint 6 // appl
+itxn_field TypeEnum
+intc_0 // 0
+itxn_field Fee
+frame_dig -1
+itxn_field ApplicationID
+pushbytes 0x7665726966795f6e66645f61646472 // "verify_nfd_addr"
+itxn_field ApplicationArgs
+frame_dig -2
+extract 2 0
+itxn_field ApplicationArgs
+frame_dig -1
+itob
+itxn_field ApplicationArgs
+global CurrentApplicationAddress
+itxn_field ApplicationArgs
+itxn_submit
+itxn LastLog
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub
+
+// opt_in_to_asa
+optintoasa_9:
+proto 2 1
+bytec_0 // ""
+txn Sender
+bytec 4 // "owner"
+app_global_get
+==
+// unauthorized
+assert
+frame_dig -1
+gtxns Amount
+pushint 100000 // 100000
+>=
+// MBR payment >= 0.1A
+assert
+frame_dig -1
+gtxns Receiver
+global CurrentApplicationAddress
+==
+// MBR payment to this app
+assert
+itxn_begin
+intc_3 // axfer
+itxn_field TypeEnum
+frame_dig -2
+txnas Assets
+itxn_field XferAsset
+intc_0 // 0
+itxn_field AssetAmount
+global CurrentApplicationAddress
+itxn_field AssetReceiver
+intc_0 // 0
+itxn_field Fee
+itxn_submit
+itxn TxID
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub
+
+// send_algo_or_asa
+sendalgoorasa_10:
+proto 4 0
+frame_dig -3
+intc_0 // 0
+!=
+bz sendalgoorasa_10_l4
+frame_dig -4
+intc_0 // 0
+==
+bnz sendalgoorasa_10_l3
+itxn_begin
+intc_3 // axfer
+itxn_field TypeEnum
+frame_dig -4
+itxn_field XferAsset
+frame_dig -3
+itxn_field AssetAmount
+frame_dig -2
+itxn_field AssetReceiver
+intc_0 // 0
+itxn_field Fee
+frame_dig -1
+itxn_field Note
+itxn_submit
+b sendalgoorasa_10_l4
+sendalgoorasa_10_l3:
+itxn_begin
+intc_1 // pay
+itxn_field TypeEnum
+frame_dig -3
+itxn_field Amount
+frame_dig -2
+itxn_field Receiver
+intc_0 // 0
+itxn_field Fee
+frame_dig -1
+itxn_field Note
+itxn_submit
+sendalgoorasa_10_l4:
+retsub
+
+// create_deal_key
+createdealkey_11:
+proto 2 1
+frame_dig -2
+len
+pushint 32 // 32
+==
+// their_address length=32
+assert
+txn Sender
+frame_dig -2
+b!=
+// Accounts different
+assert
+txn Sender
+frame_dig -2
+b>
+bnz createdealkey_11_l2
+bytec 14 // "D"
+frame_dig -2
+txn Sender
+concat
+frame_dig -1
+concat
+sha256
+concat
+b createdealkey_11_l3
+createdealkey_11_l2:
+bytec 14 // "D"
+txn Sender
+frame_dig -2
+concat
+frame_dig -1
+concat
+sha256
+concat
+createdealkey_11_l3:
+retsub
+
+// record_deal_key
+recorddealkey_12:
+proto 4 0
+frame_dig -1
+store 11
+frame_dig -4
+box_get
+store 13
+store 12
+load 13
+bnz recorddealkey_12_l2
+frame_dig -4
+intc 4 // 1023
+box_create
+pop
+load 11
+load 11
+loads
+pushint 424500 // 424500
++
+stores
+frame_dig -4
+intc_0 // 0
+frame_dig -3
+box_replace
+b recorddealkey_12_l3
+recorddealkey_12_l2:
+load 12
+frame_dig -2
+pushint 33 // 33
+*
+pushint 33 // 33
+extract3
+pushint 33 // 33
+bzero
+==
+// deal_key[index] is zero bytes
+assert
+frame_dig -4
+frame_dig -2
+pushint 33 // 33
+*
+frame_dig -3
+box_replace
+recorddealkey_12_l3:
+retsub
+
+// confirm_deal_key_at_index
+confirmdealkeyatindex_13:
+proto 3 1
+frame_dig -3
+box_get
+store 22
+store 21
+load 22
+bz confirmdealkeyatindex_13_l5
+load 21
+intc 4 // 1023
+bzero
+==
+bnz confirmdealkeyatindex_13_l4
+load 21
+frame_dig -1
+pushint 33 // 33
+*
+pushint 33 // 33
+extract3
+frame_dig -2
+==
+bz confirmdealkeyatindex_13_l5
+intc_1 // 1
+retsub
+confirmdealkeyatindex_13_l4:
+intc_0 // 0
+retsub
+confirmdealkeyatindex_13_l5:
+intc_0 // 0
+retsub
+
+// check_deal_keys
+checkdealkeys_14:
+proto 4 0
+bytec 7 // "status"
+app_global_get
+bytec 13 // "active"
+==
+// App is active
+assert
+txn Sender
+frame_dig -2
+!=
+// Addresses not equal
+assert
+frame_dig -4
+len
+pushint 33 // 33
+==
+// deal_key len=33
+assert
+txn Sender
+frame_dig -4
+frame_dig -3
+callsub confirmdealkeyatindex_13
+intc_1 // 1
+==
+// Deal key in sender list
+assert
+frame_dig -2
+frame_dig -4
+frame_dig -1
+callsub confirmdealkeyatindex_13
+intc_1 // 1
+==
+// Deal key in their list
+assert
+retsub
+
+// erase_deal_key_at_index
+erasedealkeyatindex_15:
+proto 2 0
+frame_dig -2
+box_get
+store 32
+store 31
+load 32
+bz erasedealkeyatindex_15_l2
+frame_dig -2
+frame_dig -1
+pushint 33 // 33
+*
+pushint 33 // 33
+bzero
+box_replace
+erasedealkeyatindex_15_l2:
+retsub
+
+// send_disbursements
+senddisbursements_16:
+proto 0 0
+load 1
+extract 34 8
+load 1
+extract 130 8
+==
+bnz senddisbursements_16_l9
+load 1
+extract 130 8
+btoi
+intc_0 // 0
+==
+bnz senddisbursements_16_l8
+load 1
+extract 42 8
+btoi
+load 1
+extract 130 8
+btoi
+load 1
+extract 66 32
+bytec 15 // "Partial payment forward"
+callsub sendalgoorasa_10
+load 1
+extract 42 8
+btoi
+load 1
+extract 34 8
+btoi
+load 1
+extract 130 8
+btoi
+-
+load 1
+extract 2 32
+bytec 16 // "Partial payment returned"
+callsub sendalgoorasa_10
+senddisbursements_16_l3:
+load 1
+extract 58 8
+btoi
+load 1
+extract 50 8
+btoi
+load 1
+extract 2 32
+bytec 17 // "Collateral returned"
+callsub sendalgoorasa_10
+load 1
+extract 98 8
+load 1
+extract 138 8
+==
+bnz senddisbursements_16_l7
+load 1
+extract 138 8
+btoi
+intc_0 // 0
+==
+bnz senddisbursements_16_l6
+load 1
+extract 106 8
+btoi
+load 1
+extract 138 8
+btoi
+load 1
+extract 2 32
+bytec 15 // "Partial payment forward"
+callsub sendalgoorasa_10
+load 1
+extract 106 8
+btoi
+load 1
+extract 98 8
+btoi
+load 1
+extract 138 8
+btoi
+-
+load 1
+extract 66 32
+bytec 16 // "Partial payment returned"
+callsub sendalgoorasa_10
+b senddisbursements_16_l10
+senddisbursements_16_l6:
+load 1
+extract 106 8
+btoi
+load 1
+extract 98 8
+btoi
+load 1
+extract 66 32
+bytec 18 // "Payment returned"
+callsub sendalgoorasa_10
+b senddisbursements_16_l10
+senddisbursements_16_l7:
+load 1
+extract 106 8
+btoi
+load 1
+extract 98 8
+btoi
+load 1
+extract 2 32
+bytec 19 // "Payment forward"
+callsub sendalgoorasa_10
+b senddisbursements_16_l10
+senddisbursements_16_l8:
+load 1
+extract 42 8
+btoi
+load 1
+extract 34 8
+btoi
+load 1
+extract 2 32
+bytec 18 // "Payment returned"
+callsub sendalgoorasa_10
+b senddisbursements_16_l3
+senddisbursements_16_l9:
+load 1
+extract 42 8
+btoi
+load 1
+extract 34 8
+btoi
+load 1
+extract 66 32
+bytec 19 // "Payment forward"
+callsub sendalgoorasa_10
+b senddisbursements_16_l3
+senddisbursements_16_l10:
+load 1
+extract 122 8
+btoi
+load 1
+extract 114 8
+btoi
+load 1
+extract 66 32
+bytec 17 // "Collateral returned"
+callsub sendalgoorasa_10
+retsub
+
+// delete_data_boxes
+deletedataboxes_17:
+proto 2 0
+txn Sender
+frame_dig -2
+extract 1 32
+concat
+box_del
+pop
+frame_dig -1
+frame_dig -2
+extract 1 32
+concat
+box_del
+pop
+retsub
+
+// box_budget
+boxbudget_18:
+proto 0 0
+intc_1 // 1
+return
+
+// create_deal
+createdeal_19:
+proto 15 1
+intc_0 // 0
+dupn 4
+bytec_0 // ""
+intc_0 // 0
+dup
+bytec_0 // ""
+dup
+intc_0 // 0
+dup
+bytec_0 // ""
+intc_0 // 0
+dup
+bytec_0 // ""
+dup
+bytec 7 // "status"
+app_global_get
+bytec 13 // "active"
+==
+// App is active
+assert
+txn Sender
+frame_dig -8
+txnas Accounts
+!=
+// Addresses not equal
+assert
+txn Sender
+store 2
+load 2
+len
+pushint 32 // 32
+==
+assert
+frame_dig -8
+txnas Accounts
+store 3
+load 3
+len
+pushint 32 // 32
+==
+assert
+frame_dig -15
+gtxns Sender
+txn Sender
+==
+assert
+frame_dig -15
+gtxns Receiver
+global CurrentApplicationAddress
+==
+frame_dig -15
+gtxns Amount
+frame_dig -12
+==
+&&
+frame_dig -11
+intc_0 // 0
+==
+&&
+frame_dig -15
+gtxns TypeEnum
+intc_3 // axfer
+==
+frame_dig -15
+gtxns AssetReceiver
+global CurrentApplicationAddress
+==
+&&
+frame_dig -15
+gtxns AssetAmount
+frame_dig -12
+==
+&&
+frame_dig -15
+gtxns XferAsset
+frame_dig -11
+==
+&&
+||
+assert
+frame_dig -14
+gtxns Sender
+txn Sender
+==
+assert
+frame_dig -14
+gtxns Receiver
+global CurrentApplicationAddress
+==
+frame_dig -14
+gtxns Amount
+frame_dig -10
+==
+&&
+frame_dig -9
+intc_0 // 0
+==
+&&
+frame_dig -14
+gtxns AssetReceiver
+global CurrentApplicationAddress
+==
+frame_dig -14
+gtxns AssetAmount
+frame_dig -10
+==
+&&
+frame_dig -14
+gtxns XferAsset
+frame_dig -9
+==
+&&
+||
+assert
+frame_dig -12
+itob
+len
+pushint 8 // 8
+==
+// your_dep_amount length=32
+assert
+frame_dig -11
+itob
+len
+pushint 8 // 8
+==
+// your_dep_asset length=32
+assert
+frame_dig -10
+itob
+len
+pushint 8 // 8
+==
+// your_col_amount length=32
+assert
+frame_dig -9
+itob
+len
+pushint 8 // 8
+==
+// your_col_asset length=32
+assert
+frame_dig -6
+itob
+len
+pushint 8 // 8
+==
+// their_dep_amount length=32
+assert
+frame_dig -5
+itob
+len
+pushint 8 // 8
+==
+// their_dep_asset length=32
+assert
+frame_dig -4
+itob
+len
+pushint 8 // 8
+==
+// their_col_amount length=32
+assert
+frame_dig -3
+itob
+len
+pushint 8 // 8
+==
+// their_col_asset length=32
+assert
+frame_dig -2
+extract 2 0
+len
+pushint 874 // 874
+<=
+// deal_note string length<=872
+assert
+frame_dig -8
+txnas Accounts
+frame_dig -2
+extract 2 0
+callsub createdealkey_11
+store 0
+load 0
+box_len
+store 8
+store 7
+load 8
+intc_0 // 0
+==
+// Deal does not already exist
+assert
+intc_0 // 0
+frame_bury 1
+frame_dig 1
+intc_2 // 256
+<
+assert
+intc_0 // 0
+frame_bury 2
+frame_dig 2
+intc_2 // 256
+<
+assert
+txn Sender
+frame_dig -8
+txnas Accounts
+b>
+bnz createdeal_19_l8
+intc_0 // 0
+frame_bury 10
+frame_dig 10
+intc_2 // 256
+<
+assert
+intc_1 // 1
+frame_bury 11
+frame_dig 11
+intc_2 // 256
+<
+assert
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 10
+setbyte
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 11
+setbyte
+concat
+load 3
+concat
+frame_dig -6
+itob
+concat
+frame_dig -5
+itob
+concat
+frame_dig -4
+itob
+concat
+frame_dig -3
+itob
+concat
+load 2
+concat
+frame_dig -12
+itob
+concat
+frame_dig -11
+itob
+concat
+frame_dig -10
+itob
+concat
+frame_dig -9
+itob
+concat
+frame_dig -6
+itob
+concat
+frame_dig -12
+itob
+concat
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 1
+setbyte
+concat
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 2
+setbyte
+concat
+frame_dig -2
+frame_bury 16
+frame_dig 16
+frame_bury 15
+intc 5 // 150
+frame_bury 13
+frame_dig 13
+itob
+extract 6 0
+concat
+frame_dig 15
+concat
+frame_bury 12
+load 0
+box_del
+pop
+load 0
+frame_dig 12
+box_put
+createdeal_19_l2:
+intc_0 // 0
+store 4
+intc_0 // 0
+store 5
+intc_0 // 0
+store 6
+load 0
+box_len
+store 10
+store 9
+load 10
+// deal_box_length
+assert
+intc 6 // 2500
+intc 7 // 400
+load 9
+pushint 33 // 33
++
+*
++
+store 5
+txn Sender
+load 0
+frame_dig -13
+intc_3 // 4
+callsub recorddealkey_12
+frame_dig -8
+txnas Accounts
+load 0
+frame_dig -7
+intc_3 // 4
+callsub recorddealkey_12
+frame_dig -15
+gtxns TypeEnum
+intc_1 // pay
+==
+bnz createdeal_19_l7
+createdeal_19_l3:
+frame_dig -14
+gtxns TypeEnum
+intc_1 // pay
+==
+bnz createdeal_19_l6
+createdeal_19_l4:
+load 4
+intc_0 // 0
+>
+bz createdeal_19_l9
+frame_dig -1
+gtxns Receiver
+global CurrentApplicationAddress
+==
+// Registration payment receiver is app address
+assert
+load 4
+frame_dig -1
+gtxns Amount
+==
+// Registrations cost = Algos paid
+assert
+b createdeal_19_l9
+createdeal_19_l6:
+load 6
+frame_dig -14
+gtxns Amount
++
+store 6
+b createdeal_19_l4
+createdeal_19_l7:
+frame_dig -15
+gtxns Amount
+store 6
+b createdeal_19_l3
+createdeal_19_l8:
+intc_1 // 1
+frame_bury 3
+frame_dig 3
+intc_2 // 256
+<
+assert
+intc_0 // 0
+frame_bury 4
+frame_dig 4
+intc_2 // 256
+<
+assert
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 3
+setbyte
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 4
+setbyte
+concat
+load 2
+concat
+frame_dig -12
+itob
+concat
+frame_dig -11
+itob
+concat
+frame_dig -10
+itob
+concat
+frame_dig -9
+itob
+concat
+load 3
+concat
+frame_dig -6
+itob
+concat
+frame_dig -5
+itob
+concat
+frame_dig -4
+itob
+concat
+frame_dig -3
+itob
+concat
+frame_dig -12
+itob
+concat
+frame_dig -6
+itob
+concat
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 1
+setbyte
+concat
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 2
+setbyte
+concat
+frame_dig -2
+frame_bury 9
+frame_dig 9
+frame_bury 8
+intc 5 // 150
+frame_bury 6
+frame_dig 6
+itob
+extract 6 0
+concat
+frame_dig 8
+concat
+frame_bury 5
+load 0
+box_del
+pop
+load 0
+frame_dig 5
+box_put
+b createdeal_19_l2
+createdeal_19_l9:
+load 5
+load 6
+<=
+// Created boxes cost < Algos deposited
+assert
+load 5
+frame_bury 0
+retsub
+
+// attach_data
+attachdata_20:
+proto 5 1
+intc_0 // 0
+bytec 7 // "status"
+app_global_get
+bytec 13 // "active"
+==
+// App is active
+assert
+intc_0 // 0
+store 15
+intc_0 // 0
+store 16
+txn Sender
+frame_dig -5
+extract 1 32
+concat
+store 14
+txn Sender
+frame_dig -5
+frame_dig -4
+callsub confirmdealkeyatindex_13
+// Given key is in sender's key list
+assert
+frame_dig -5
+box_get
+store 18
+store 17
+load 18
+assert
+load 17
+store 1
+txn Sender
+load 1
+extract 2 32
+==
+bnz attachdata_20_l11
+txn Sender
+load 1
+extract 66 32
+==
+bnz attachdata_20_l6
+intc_0 // 0
+return
+attachdata_20_l3:
+load 14
+box_len
+store 20
+store 19
+load 20
+bnz attachdata_20_l5
+frame_dig -3
+pushint 64 // 64
++
+intc 7 // 400
+*
+intc 6 // 2500
++
+pushint 425300 // 425300
++
+store 15
+load 15
+load 16
+<=
+// Algos in deal exceed cost of new box + 3 deal boxes
+assert
+load 14
+frame_dig -3
+box_create
+pop
+load 14
+frame_dig -2
+frame_dig -1
+extract 2 0
+box_replace
+b attachdata_20_l16
+attachdata_20_l5:
+load 19
+pop
+load 14
+frame_dig -2
+frame_dig -1
+extract 2 0
+box_replace
+b attachdata_20_l16
+attachdata_20_l6:
+load 1
+extract 1 1
+bytec_3 // 0x01
+==
+load 1
+extract 1 1
+bytec 5 // 0x02
+==
+||
+load 1
+extract 1 1
+bytec 8 // 0x03
+==
+||
+// second_acc_status=0x01 or 0x02 or 0x03
+assert
+load 1
+extract 106 8
+btoi
+intc_0 // 0
+==
+bnz attachdata_20_l10
+attachdata_20_l7:
+load 1
+extract 122 8
+btoi
+intc_0 // 0
+==
+bnz attachdata_20_l9
+attachdata_20_l8:
+frame_dig -5
+pushint 147 // 147
+bytec_3 // 0x01
+box_replace
+b attachdata_20_l3
+attachdata_20_l9:
+load 16
+load 1
+extract 114 8
+btoi
++
+store 16
+b attachdata_20_l8
+attachdata_20_l10:
+load 1
+extract 98 8
+btoi
+store 16
+b attachdata_20_l7
+attachdata_20_l11:
+load 1
+extract 0 1
+bytec_3 // 0x01
+==
+load 1
+extract 0 1
+bytec 5 // 0x02
+==
+||
+load 1
+extract 0 1
+bytec 8 // 0x03
+==
+||
+// first_acc_status=0x01 or 0x02 or 0x03
+assert
+load 1
+extract 42 8
+btoi
+intc_0 // 0
+==
+bnz attachdata_20_l15
+attachdata_20_l12:
+load 1
+extract 58 8
+btoi
+intc_0 // 0
+==
+bnz attachdata_20_l14
+attachdata_20_l13:
+frame_dig -5
+pushint 146 // 146
+bytec_3 // 0x01
+box_replace
+b attachdata_20_l3
+attachdata_20_l14:
+load 16
+load 1
+extract 50 8
+btoi
++
+store 16
+b attachdata_20_l13
+attachdata_20_l15:
+load 1
+extract 34 8
+btoi
+store 16
+b attachdata_20_l12
+attachdata_20_l16:
+load 15
+frame_bury 0
+retsub
+
+// match_deal
+matchdeal_21:
+proto 6 1
+bytec_0 // ""
+intc_0 // 0
+dup
+frame_dig -6
+gtxns Sender
+txn Sender
+==
+assert
+frame_dig -5
+gtxns Sender
+txn Sender
+==
+assert
+frame_dig -4
+frame_dig -3
+frame_dig -2
+txnas Accounts
+frame_dig -1
+callsub checkdealkeys_14
+frame_dig -4
+box_len
+store 24
+store 23
+load 24
+// deal_value has value
+assert
+frame_dig -4
+box_get
+store 26
+store 25
+load 26
+assert
+load 25
+store 1
+txn Sender
+frame_dig -2
+txnas Accounts
+b>
+bnz matchdeal_21_l7
+load 1
+extract 0 1
+bytec_3 // 0x01
+==
+// first_acc_status=0x01
+assert
+load 1
+extract 1 1
+bytec_1 // 0x00
+==
+// second_acc_status=0x00
+assert
+load 1
+extract 106 8
+intc_0 // 0
+itob
+==
+bnz matchdeal_21_l6
+frame_dig -6
+gtxns TypeEnum
+intc_3 // axfer
+==
+assert
+frame_dig -6
+gtxns AssetReceiver
+global CurrentApplicationAddress
+==
+assert
+frame_dig -6
+gtxns AssetAmount
+itob
+load 1
+extract 98 8
+==
+assert
+frame_dig -6
+gtxns XferAsset
+itob
+load 1
+extract 106 8
+==
+assert
+matchdeal_21_l3:
+load 1
+extract 122 8
+intc_0 // 0
+itob
+==
+bnz matchdeal_21_l5
+frame_dig -5
+gtxns TypeEnum
+intc_3 // axfer
+==
+assert
+frame_dig -5
+gtxns AssetReceiver
+global CurrentApplicationAddress
+==
+assert
+frame_dig -5
+gtxns AssetAmount
+itob
+load 1
+extract 114 8
+==
+assert
+frame_dig -5
+gtxns XferAsset
+itob
+load 1
+extract 122 8
+==
+assert
+b matchdeal_21_l13
+matchdeal_21_l5:
+frame_dig -5
+gtxns Receiver
+global CurrentApplicationAddress
+==
+assert
+frame_dig -5
+gtxns Amount
+itob
+load 1
+extract 114 8
+==
+assert
+b matchdeal_21_l13
+matchdeal_21_l6:
+frame_dig -6
+gtxns Receiver
+global CurrentApplicationAddress
+==
+assert
+frame_dig -6
+gtxns Amount
+itob
+load 1
+extract 98 8
+==
+assert
+b matchdeal_21_l3
+matchdeal_21_l7:
+load 1
+extract 0 1
+bytec_1 // 0x00
+==
+// first_acc_status=0x00
+assert
+load 1
+extract 1 1
+bytec_3 // 0x01
+==
+// second_acc_status=0x01
+assert
+load 1
+extract 42 8
+intc_0 // 0
+itob
+==
+bnz matchdeal_21_l12
+frame_dig -6
+gtxns TypeEnum
+intc_3 // axfer
+==
+assert
+frame_dig -6
+gtxns AssetReceiver
+global CurrentApplicationAddress
+==
+assert
+frame_dig -6
+gtxns AssetAmount
+itob
+load 1
+extract 34 8
+==
+assert
+frame_dig -6
+gtxns XferAsset
+itob
+load 1
+extract 42 8
+==
+assert
+matchdeal_21_l9:
+load 1
+extract 58 8
+intc_0 // 0
+itob
+==
+bnz matchdeal_21_l11
+frame_dig -5
+gtxns TypeEnum
+intc_3 // axfer
+==
+assert
+frame_dig -5
+gtxns AssetReceiver
+global CurrentApplicationAddress
+==
+assert
+frame_dig -5
+gtxns AssetAmount
+itob
+load 1
+extract 50 8
+==
+assert
+frame_dig -5
+gtxns XferAsset
+itob
+load 1
+extract 58 8
+==
+assert
+b matchdeal_21_l13
+matchdeal_21_l11:
+frame_dig -5
+gtxns Receiver
+global CurrentApplicationAddress
+==
+assert
+frame_dig -5
+gtxns Amount
+itob
+load 1
+extract 50 8
+==
+assert
+b matchdeal_21_l13
+matchdeal_21_l12:
+frame_dig -6
+gtxns Receiver
+global CurrentApplicationAddress
+==
+assert
+frame_dig -6
+gtxns Amount
+itob
+load 1
+extract 34 8
+==
+assert
+b matchdeal_21_l9
+matchdeal_21_l13:
+pushint 2 // 2
+frame_bury 1
+frame_dig 1
+intc_2 // 256
+<
+assert
+pushint 2 // 2
+frame_bury 2
+frame_dig 2
+intc_2 // 256
+<
+assert
+frame_dig -4
+intc_0 // 0
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 1
+setbyte
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 2
+setbyte
+concat
+box_replace
+bytec 12 // "total_deals"
+bytec 12 // "total_deals"
+app_global_get
+intc_1 // 1
++
+app_global_put
+bytec 6 // "active_deals"
+bytec 6 // "active_deals"
+app_global_get
+intc_1 // 1
++
+app_global_put
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 1
+setbyte
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 2
+setbyte
+concat
+frame_bury 0
+pushint 2 // 2
+frame_dig 0
+len
+==
+assert
+retsub
+
+// recall_deal
+recalldeal_22:
+proto 4 1
+bytec_0 // ""
+frame_dig -4
+frame_dig -3
+frame_dig -2
+txnas Accounts
+frame_dig -1
+callsub checkdealkeys_14
+frame_dig -4
+box_len
+store 28
+store 27
+load 28
+// deal_value has value
+assert
+frame_dig -4
+box_get
+store 30
+store 29
+load 30
+assert
+load 29
+store 1
+txn Sender
+frame_dig -2
+txnas Accounts
+b>
+bnz recalldeal_22_l2
+load 1
+extract 0 1
+bytec_1 // 0x00
+==
+// first_acc_status=0x00
+assert
+load 1
+extract 1 1
+bytec_3 // 0x01
+==
+// second_acc_status=0x01
+assert
+load 1
+extract 106 8
+btoi
+load 1
+extract 98 8
+btoi
+load 1
+extract 66 32
+bytec 10 // "Deal recalled"
+callsub sendalgoorasa_10
+load 1
+extract 122 8
+btoi
+load 1
+extract 114 8
+btoi
+load 1
+extract 66 32
+bytec 10 // "Deal recalled"
+callsub sendalgoorasa_10
+b recalldeal_22_l3
+recalldeal_22_l2:
+load 1
+extract 0 1
+bytec_3 // 0x01
+==
+// first_acc_status=0x01
+assert
+load 1
+extract 1 1
+bytec_1 // 0x00
+==
+// second_acc_status=0x00
+assert
+load 1
+extract 42 8
+btoi
+load 1
+extract 34 8
+btoi
+load 1
+extract 2 32
+bytec 10 // "Deal recalled"
+callsub sendalgoorasa_10
+load 1
+extract 58 8
+btoi
+load 1
+extract 50 8
+btoi
+load 1
+extract 2 32
+bytec 10 // "Deal recalled"
+callsub sendalgoorasa_10
+recalldeal_22_l3:
+txn Sender
+frame_dig -3
+callsub erasedealkeyatindex_15
+frame_dig -2
+txnas Accounts
+frame_dig -1
+callsub erasedealkeyatindex_15
+frame_dig -4
+box_del
+pop
+frame_dig -4
+frame_dig -2
+txnas Accounts
+callsub deletedataboxes_17
+pushbytes 0x526563616c6c6564 // "Recalled"
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub
+
+// reject_deal
+rejectdeal_23:
+proto 4 1
+bytec_0 // ""
+frame_dig -4
+frame_dig -3
+frame_dig -2
+txnas Accounts
+frame_dig -1
+callsub checkdealkeys_14
+frame_dig -4
+box_len
+store 34
+store 33
+load 34
+// deal_value has value
+assert
+frame_dig -4
+box_get
+store 36
+store 35
+load 36
+assert
+load 35
+store 1
+txn Sender
+frame_dig -2
+txnas Accounts
+b>
+bnz rejectdeal_23_l2
+load 1
+extract 0 1
+bytec_3 // 0x01
+==
+// first_acc_status=0x01
+assert
+load 1
+extract 1 1
+bytec_1 // 0x00
+==
+// second_acc_status=0x00
+assert
+load 1
+extract 42 8
+btoi
+load 1
+extract 34 8
+btoi
+load 1
+extract 2 32
+bytec 11 // "Deal rejected by "
+txn Sender
+concat
+callsub sendalgoorasa_10
+load 1
+extract 58 8
+btoi
+load 1
+extract 50 8
+btoi
+load 1
+extract 2 32
+bytec 11 // "Deal rejected by "
+txn Sender
+concat
+callsub sendalgoorasa_10
+b rejectdeal_23_l3
+rejectdeal_23_l2:
+load 1
+extract 0 1
+bytec_1 // 0x00
+==
+// first_acc_status=0x00
+assert
+load 1
+extract 1 1
+bytec_3 // 0x01
+==
+// second_acc_status=0x01
+assert
+load 1
+extract 106 8
+btoi
+load 1
+extract 98 8
+btoi
+load 1
+extract 66 32
+bytec 11 // "Deal rejected by "
+txn Sender
+concat
+callsub sendalgoorasa_10
+load 1
+extract 122 8
+btoi
+load 1
+extract 114 8
+btoi
+load 1
+extract 66 32
+bytec 11 // "Deal rejected by "
+txn Sender
+concat
+callsub sendalgoorasa_10
+rejectdeal_23_l3:
+txn Sender
+frame_dig -3
+callsub erasedealkeyatindex_15
+frame_dig -2
+txnas Accounts
+frame_dig -1
+callsub erasedealkeyatindex_15
+frame_dig -4
+box_del
+pop
+frame_dig -4
+frame_dig -2
+txnas Accounts
+callsub deletedataboxes_17
+pushbytes 0x52656a6563746564 // "Rejected"
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub
+
+// adjust_disbursement
+adjustdisbursement_24:
+proto 6 1
+bytec_0 // ""
+intc_0 // 0
+dupn 3
+frame_dig -6
+frame_dig -5
+frame_dig -4
+txnas Accounts
+frame_dig -3
+callsub checkdealkeys_14
+frame_dig -2
+itob
+len
+pushint 8 // 8
+==
+// first_acc_forward_amount length=8
+assert
+frame_dig -1
+itob
+len
+pushint 8 // 8
+==
+// second_acc_forward_amount length=8
+assert
+frame_dig -6
+box_len
+store 38
+store 37
+load 38
+// deal_value has value
+assert
+frame_dig -6
+box_get
+store 40
+store 39
+load 40
+assert
+load 39
+store 1
+load 1
+extract 0 1
+bytec 5 // 0x02
+==
+load 1
+extract 0 1
+bytec 8 // 0x03
+==
+||
+// first_acc_status=0x02 or 0x03
+assert
+load 1
+extract 1 1
+bytec 5 // 0x02
+==
+load 1
+extract 1 1
+bytec 8 // 0x03
+==
+||
+// second_acc_status=0x02 or 0x03
+assert
+txn Sender
+frame_dig -4
+txnas Accounts
+b>
+bnz adjustdisbursement_24_l2
+pushint 2 // 2
+frame_bury 3
+frame_dig 3
+intc_2 // 256
+<
+assert
+pushint 3 // 3
+frame_bury 4
+frame_dig 4
+intc_2 // 256
+<
+assert
+frame_dig -6
+intc_0 // 0
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 3
+setbyte
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 4
+setbyte
+concat
+box_replace
+b adjustdisbursement_24_l3
+adjustdisbursement_24_l2:
+pushint 3 // 3
+frame_bury 1
+frame_dig 1
+intc_2 // 256
+<
+assert
+pushint 2 // 2
+frame_bury 2
+frame_dig 2
+intc_2 // 256
+<
+assert
+frame_dig -6
+intc_0 // 0
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 1
+setbyte
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 2
+setbyte
+concat
+box_replace
+adjustdisbursement_24_l3:
+frame_dig -6
+pushint 130 // 130
+frame_dig -2
+itob
+frame_dig -1
+itob
+concat
+box_replace
+pushbytes 0x41646a7573746564 // "Adjusted"
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub
+
+// agree_disbursement
+agreedisbursement_25:
+proto 4 1
+bytec_0 // ""
+intc_0 // 0
+dup
+frame_dig -4
+frame_dig -3
+frame_dig -2
+txnas Accounts
+frame_dig -1
+callsub checkdealkeys_14
+frame_dig -4
+box_len
+store 42
+store 41
+load 42
+// deal_value has value
+assert
+frame_dig -4
+box_get
+store 44
+store 43
+load 44
+assert
+load 43
+store 1
+txn Sender
+frame_dig -2
+txnas Accounts
+b>
+bnz agreedisbursement_25_l6
+load 1
+extract 1 1
+bytec 5 // 0x02
+==
+// first_acc_status=0x02
+assert
+load 1
+extract 0 1
+bytec 5 // 0x02
+==
+bnz agreedisbursement_25_l5
+load 1
+extract 0 1
+bytec 8 // 0x03
+==
+bnz agreedisbursement_25_l4
+intc_0 // 0
+return
+agreedisbursement_25_l4:
+callsub senddisbursements_16
+txn Sender
+frame_dig -3
+callsub erasedealkeyatindex_15
+frame_dig -2
+txnas Accounts
+frame_dig -1
+callsub erasedealkeyatindex_15
+frame_dig -4
+box_del
+pop
+frame_dig -4
+frame_dig -2
+txnas Accounts
+callsub deletedataboxes_17
+bytec 6 // "active_deals"
+bytec 6 // "active_deals"
+app_global_get
+intc_1 // 1
+-
+app_global_put
+bytec 9 // "completed_deals"
+bytec 9 // "completed_deals"
+app_global_get
+intc_1 // 1
++
+app_global_put
+bytec 20 // "Disbursed"
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+b agreedisbursement_25_l11
+agreedisbursement_25_l5:
+pushint 3 // 3
+frame_bury 2
+frame_dig 2
+intc_2 // 256
+<
+assert
+frame_dig -4
+intc_1 // 1
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 2
+setbyte
+box_replace
+b agreedisbursement_25_l11
+agreedisbursement_25_l6:
+load 1
+extract 0 1
+bytec 5 // 0x02
+==
+// first_acc_status=0x02
+assert
+load 1
+extract 1 1
+bytec 5 // 0x02
+==
+bnz agreedisbursement_25_l10
+load 1
+extract 1 1
+bytec 8 // 0x03
+==
+bnz agreedisbursement_25_l9
+intc_0 // 0
+return
+agreedisbursement_25_l9:
+callsub senddisbursements_16
+txn Sender
+frame_dig -3
+callsub erasedealkeyatindex_15
+frame_dig -2
+txnas Accounts
+frame_dig -1
+callsub erasedealkeyatindex_15
+frame_dig -4
+box_del
+pop
+frame_dig -4
+frame_dig -2
+txnas Accounts
+callsub deletedataboxes_17
+bytec 6 // "active_deals"
+bytec 6 // "active_deals"
+app_global_get
+intc_1 // 1
+-
+app_global_put
+bytec 9 // "completed_deals"
+bytec 9 // "completed_deals"
+app_global_get
+intc_1 // 1
++
+app_global_put
+bytec 20 // "Disbursed"
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+b agreedisbursement_25_l11
+agreedisbursement_25_l10:
+pushint 3 // 3
+frame_bury 1
+frame_dig 1
+intc_2 // 256
+<
+assert
+frame_dig -4
+intc_0 // 0
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 1
+setbyte
+box_replace
+agreedisbursement_25_l11:
+retsub
+
+// deal_value_method_caster
+dealvaluemethodcaster_26:
+proto 0 0
+bytec_0 // ""
+txna ApplicationArgs 1
+frame_bury 0
+frame_dig 0
+callsub dealvaluemethod_3
+retsub
+
+// hello_caster
+hellocaster_27:
+proto 0 0
+bytec_0 // ""
+dup
+txna ApplicationArgs 1
+frame_bury 1
+frame_dig 1
+callsub hello_4
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// change_status_caster
+changestatuscaster_28:
+proto 0 0
+bytec_0 // ""
+dup
+txna ApplicationArgs 1
+frame_bury 1
+frame_dig 1
+callsub changestatus_5
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// change_owner_caster
+changeownercaster_29:
+proto 0 0
+bytec_0 // ""
+dup
+txna ApplicationArgs 1
+frame_bury 1
+frame_dig 1
+callsub changeowner_6
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// send_note_caster
+sendnotecaster_30:
+proto 0 0
+bytec_0 // ""
+dupn 2
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+frame_bury 2
+frame_dig 1
+frame_dig 2
+callsub sendnote_7
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// verify_nfd_caster
+verifynfdcaster_31:
+proto 0 0
+bytec_0 // ""
+dup
+intc_0 // 0
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+btoi
+frame_bury 2
+frame_dig 1
+frame_dig 2
+callsub verifynfd_8
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// opt_in_to_asa_caster
+optintoasacaster_32:
+proto 0 0
+bytec_0 // ""
+intc_0 // 0
+dup
+txna ApplicationArgs 1
+intc_0 // 0
+getbyte
+frame_bury 1
+txn GroupIndex
+intc_1 // 1
+-
+frame_bury 2
+frame_dig 2
+gtxns TypeEnum
+intc_1 // pay
+==
+assert
+frame_dig 1
+frame_dig 2
+callsub optintoasa_9
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// box_budget_caster
+boxbudgetcaster_33:
+proto 0 0
+callsub boxbudget_18
+retsub
+
+// create_deal_caster
+createdealcaster_34:
+proto 0 0
+intc_0 // 0
+dupn 13
+bytec_0 // ""
+intc_0 // 0
+txna ApplicationArgs 1
+btoi
+frame_bury 3
+txna ApplicationArgs 2
+btoi
+frame_bury 4
+txna ApplicationArgs 3
+btoi
+frame_bury 5
+txna ApplicationArgs 4
+btoi
+frame_bury 6
+txna ApplicationArgs 5
+btoi
+frame_bury 7
+txna ApplicationArgs 6
+intc_0 // 0
+getbyte
+frame_bury 8
+txna ApplicationArgs 7
+btoi
+frame_bury 9
+txna ApplicationArgs 8
+btoi
+frame_bury 10
+txna ApplicationArgs 9
+btoi
+frame_bury 11
+txna ApplicationArgs 10
+btoi
+frame_bury 12
+txna ApplicationArgs 11
+btoi
+frame_bury 13
+txna ApplicationArgs 12
+frame_bury 14
+txn GroupIndex
+pushint 3 // 3
+-
+frame_bury 1
+txn GroupIndex
+pushint 2 // 2
+-
+frame_bury 2
+txn GroupIndex
+intc_1 // 1
+-
+frame_bury 15
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+frame_dig 5
+frame_dig 6
+frame_dig 7
+frame_dig 8
+frame_dig 9
+frame_dig 10
+frame_dig 11
+frame_dig 12
+frame_dig 13
+frame_dig 14
+frame_dig 15
+callsub createdeal_19
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+itob
+concat
+log
+retsub
+
+// attach_data_caster
+attachdatacaster_35:
+proto 0 0
+intc_0 // 0
+bytec_0 // ""
+intc_0 // 0
+dupn 2
+bytec_0 // ""
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+btoi
+frame_bury 2
+txna ApplicationArgs 3
+btoi
+frame_bury 3
+txna ApplicationArgs 4
+btoi
+frame_bury 4
+txna ApplicationArgs 5
+frame_bury 5
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+frame_dig 5
+callsub attachdata_20
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+itob
+concat
+log
+retsub
+
+// match_deal_caster
+matchdealcaster_36:
+proto 0 0
+bytec_0 // ""
+intc_0 // 0
+dup
+bytec_0 // ""
+intc_0 // 0
+dupn 2
+txna ApplicationArgs 1
+frame_bury 3
+txna ApplicationArgs 2
+btoi
+frame_bury 4
+txna ApplicationArgs 3
+intc_0 // 0
+getbyte
+frame_bury 5
+txna ApplicationArgs 4
+btoi
+frame_bury 6
+txn GroupIndex
+pushint 2 // 2
+-
+frame_bury 1
+txn GroupIndex
+intc_1 // 1
+-
+frame_bury 2
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+frame_dig 5
+frame_dig 6
+callsub matchdeal_21
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// recall_deal_caster
+recalldealcaster_37:
+proto 0 0
+bytec_0 // ""
+dup
+intc_0 // 0
+dupn 2
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+btoi
+frame_bury 2
+txna ApplicationArgs 3
+intc_0 // 0
+getbyte
+frame_bury 3
+txna ApplicationArgs 4
+btoi
+frame_bury 4
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+callsub recalldeal_22
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// reject_deal_caster
+rejectdealcaster_38:
+proto 0 0
+bytec_0 // ""
+dup
+intc_0 // 0
+dupn 2
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+btoi
+frame_bury 2
+txna ApplicationArgs 3
+intc_0 // 0
+getbyte
+frame_bury 3
+txna ApplicationArgs 4
+btoi
+frame_bury 4
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+callsub rejectdeal_23
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// adjust_disbursement_caster
+adjustdisbursementcaster_39:
+proto 0 0
+bytec_0 // ""
+dup
+intc_0 // 0
+dupn 4
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+btoi
+frame_bury 2
+txna ApplicationArgs 3
+intc_0 // 0
+getbyte
+frame_bury 3
+txna ApplicationArgs 4
+btoi
+frame_bury 4
+txna ApplicationArgs 5
+btoi
+frame_bury 5
+txna ApplicationArgs 6
+btoi
+frame_bury 6
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+frame_dig 5
+frame_dig 6
+callsub adjustdisbursement_24
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// agree_disbursement_caster
+agreedisbursementcaster_40:
+proto 0 0
+bytec_0 // ""
+dup
+intc_0 // 0
+dupn 2
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+btoi
+frame_bury 2
+txna ApplicationArgs 3
+intc_0 // 0
+getbyte
+frame_bury 3
+txna ApplicationArgs 4
+btoi
+frame_bury 4
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+callsub agreedisbursement_25
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
